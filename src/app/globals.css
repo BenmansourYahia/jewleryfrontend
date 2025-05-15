@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 30 20% 20%; /* Deep brown for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 30 20% 20%; /* Deep brown */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 20%;
+
+    --primary: 48 68% 54%; /* Elegant Gold: #D4AF37 */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 34 30% 80%; /* Light Brown: #BFA181 */
+    --secondary-foreground: 30 20% 20%;
+
+    --muted: 34 30% 92%; /* Very light brown */
+    --muted-foreground: 34 30% 40%;
+
+    --accent: 48 68% 54%; /* Gold accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 34 30% 80%; /* Light brown border */
+    --input: 34 30% 80%;
+    --ring: 48 68% 54%; /* Gold ring */
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors (can be adjusted if a sidebar is heavily used, defaults are fine for now) */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 30 20% 20%;
+    --sidebar-primary: 48 68% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 34 30% 80%;
+    --sidebar-accent-foreground: 30 20% 20%;
+    --sidebar-border: 34 30% 80%;
+    --sidebar-ring: 48 68% 54%;
+  }
+
+  .dark {
+    --background: 30 20% 15%; /* Deep brown */
+    --foreground: 48 68% 90%; /* Light gold */
+
+    --card: 30 20% 20%;
+    --card-foreground: 48 68% 90%;
+
+    --popover: 30 20% 20%;
+    --popover-foreground: 48 68% 90%;
+
+    --primary: 48 68% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 34 30% 40%;
+    --secondary-foreground: 48 68% 90%;
+
+    --muted: 34 30% 25%;
+    --muted-foreground: 34 30% 80%;
+
+    --accent: 48 68% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 34 30% 40%;
+    --input: 34 30% 40%;
+    --ring: 48 68% 54%;
+    
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Sidebar colors for dark theme */
+    --sidebar-background: 30 20% 15%;
+    --sidebar-foreground: 48 68% 90%;
+    --sidebar-primary: 48 68% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 34 30% 40%;
+    --sidebar-accent-foreground: 48 68% 90%;
+    --sidebar-border: 34 30% 40%;
+    --sidebar-ring: 48 68% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Enhanced product card styling */
+.product-card-hover {
+  @apply transition-all duration-300 ease-in-out;
+  @apply bg-white shadow-sm;
+  @apply border border-gray-100;
+}
+
+.product-card-hover:hover {
+  @apply shadow-lg transform scale-[1.02];
+  @apply border-gray-200;
+}
+
+/* Elegant button styling */
+.btn-elegant {
+  @apply px-6 py-2;
+  @apply bg-primary text-primary-foreground;
+  @apply transition-all duration-300;
+  @apply hover:bg-opacity-90;
+  @apply rounded-none;
+  @apply font-light tracking-wider;
+}
+
+/* Section styling */
+.section-elegant {
+  @apply py-16 px-4 md:px-8;
+  @apply max-w-7xl mx-auto;
+}
+
+/* Grid layout for products */
+.products-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  @apply gap-8;
+  @apply py-8;
+}
+
+/* Navigation styling */
+.nav-elegant {
+  @apply font-light tracking-wider;
+  @apply transition-colors duration-300;
+}
+
+.nav-elegant:hover {
+  @apply text-primary;
+}
+
+/* Form input styling */
+.input-elegant {
+  @apply border border-gray-200;
+  @apply px-4 py-2;
+  @apply focus:outline-none focus:border-primary;
+  @apply transition-colors duration-300;
+}
+
+/* Container styling */
+.container-elegant {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Typography utilities */
+.text-elegant {
+  @apply font-light tracking-wider;
+}
+
+.heading-elegant {
+  @apply font-['Playfair_Display'] font-medium;
+  @apply tracking-wide;
+}
